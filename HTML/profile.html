@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+
+    <link
+      rel="shortcut icon"
+      href="../Assets/Images/usuario.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../Assets/CSS/profile.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="navbar-toggle" id="js-navbar-toggle">
+        <i class="fas fa-bars"></i>
+      </span>
+      <a href="#" class="logo"><img src="../Assets/Images/compras.png" alt="Logo da marca" title="Logo"></a>
+      <div class="entregar">
+        <p class="p1">Entregar em:</p>
+        <p class="localEntregar" id="localUser"><i id="iconeLocal"></i> </p>
+      </div>
+      <div class="carteira">
+        <i id="carteiraIcone"></i><p id="carteiraUser"></p> 
+      </div>
+      <div>
+        <p id="saudacao" class="p2"></p>
+      </div>
+        <ul class="main-nav" id="js-menu">
+            <li>
+            <a class="nav-links" href="#popup1">Sacola</a>
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Realize suas alterações</h2>
+
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <section>
+                            <h3>Sua sacola:</h3>
+                                <ul id="listaSacola">
+                                  
+                                </ul>
+                        </section>
+                        
+                    </div>
+                </div>
+            </div>
+            </li>
+            <li>
+                <a href="../HTML/user.html" class="nav-links">Perfil</a>
+            </li>
+            <li>
+                <a href="../HTML/autenticacao.html" class="nav-links">Sair</a>
+            </li>
+        </ul>
+    </nav>
+    <h1>Faça a sua sacola!</h1>
+    
+    <section class="conteudo" id="receitas">
+      
+    </section>
+  </body>
+  <script src="../Assets/JS/variaveis.js"></script>
+  <script src="../Assets/JS/profile.js"></script>
+</html>

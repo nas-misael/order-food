@@ -1,0 +1,301 @@
+body,
+html {
+  background-color: #eee;
+  height: 100vh;
+  width: 100%;
+}
+
+
+.form-area {
+  width: 50%;
+  height: 70vh;
+  margin: 60px auto 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgb(0 0 0 / 20%);
+  text-align: center;
+  padding: 45px;
+  position: relative;
+}
+
+
+.banner {
+  width: 12rem;
+  background-image: url(../Images/cadastro.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 130px;
+  float: right;
+  display: inline;
+  margin-top: 20%;
+}
+
+.status {
+  margin-top: 10px;
+  color: #FF0000;
+  font-weight: bold;
+  line-height: 1em;
+  font-family: 'Roboto', sans-serif;
+}
+
+#voltainicio {
+  position: fixed;
+  right: 0;
+  top: 80%;
+  width: 10em;
+  margin-top: -2.5em;
+}
+
+.nav-links{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.conteudo-usuario {
+  width: 50%;
+  float: left;
+  margin-top: 15%;
+  height: 100%;
+}
+
+.conteudo-perfil {
+  color: #292929;
+  font-weight: bold;
+  line-height: 1em;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 15px;
+}
+
+.form-area h2 {
+  color: #292929;
+  font-weight: bold;
+  line-height: 1em;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 50px;
+}
+
+.conteudo-perfil p {
+  border: none;
+  border-bottom: 4px solid #292929;
+  width: 60%;
+  box-sizing: border-box;
+  margin-left: 20%;
+  line-height: 1rem;
+}
+
+.btn {
+  color: #2ecc71;
+  height: 1.5rem;
+  width: 10rem;
+  font-size: 0.8rem;
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1em;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+}
+
+.status {
+    margin-top: 10px;
+    color: #FF0000;
+    font-weight: bold;
+    line-height: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+#imagemUsuario img{
+  margin-top: -40px;
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+}
+
+.btn:hover {
+  font-size: 1rem;
+
+}
+
+.excluir {
+    color: #FF0000;
+}
+
+.excluir:hover {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .form-area { 
+    width: 100%;
+    height: 70vh;
+    }
+
+  .conteudo-usuario  {
+    width: 40%;
+    margin-left: -10%; 
+    font-size: clamp(0.5rem, 2.5vw, 1rem); 
+  }
+
+  .conteudo-usuario p {
+    font-size: clamp(0.5rem, 2vw, 1rem);
+    
+  }
+
+  .banner {
+    height: 5rem;
+    width: 12rem;
+    margin-right: -10%;
+    margin-top: 25vh;
+  }
+
+  .btn {
+    height: 0.7rem;
+    margin-top: 5px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.popup {
+  margin: 0 auto;
+  padding: 20px;
+  background: #605C4E;
+  border-radius: 5px;
+  width: 80%;
+  position: relative;
+  height: 90%;
+  transition: all 2s ease-in-out;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  height: 80%;
+  overflow: auto;
+}
+
+.form-area2{
+	width: 60%;
+	height: 40%;
+	margin: 60px auto 0;
+	position: relative;
+	background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 20%);
+	text-align: center;
+	padding: 45px;
+    
+}
+
+
+
+.form-area2 input[type= "email"],.form-area2 input[type = "password"], .form-area2 input[type= "text"], .form-area2 input[type= "tel"], .form-area2 input[type= "number"]{
+	border: 0;
+	display: block;
+	margin: 1rem auto;
+	text-align: center;
+	border: 1px solid #292929;
+  height: 30px;
+	width: 20rem;
+	outline: none;
+	color: black;
+	border-radius: 20px;
+	transition: 0.3s;
+}
+
+.form-area2 input[type="password"]:focus,.form-area2 input[type="email"]:focus, .form-area2 input[type="text"]:focus, .form-area2 input[type="tel"]:focus, .form-area2 input[type="number"]:focus{
+	border-color: #2ecc71;
+  }
+  .form-area2 h3{
+	  background-image: url(../Images/title.png);
+	  background-position: center center;
+	  background-repeat: no-repeat;
+	  background-size: contain;
+	  height: 100px;
+	  max-width: 100%;
+	  text-indent: -9000px;
+	  width: 100%;
+	  
+	}
+	
+	.form-area2 h2 {
+		color: #292929;
+		font-weight: bold;
+		line-height: 1em;
+		font-family: 'Roboto', sans-serif;
+	}
+	
+	.img-area{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: #292929;
+		position: absolute;
+		top: -5%;
+		left: 48%;
+		
+		
+	}
+	.img-area img{
+		width: 80%;
+		padding: 5px;
+		
+	}
+
+  @media screen and (max-width: 480px) {
+		.form-area2 input[type= "email"],.form-area2 input[type = "password"], .form-area2 input[type= "text"], .form-area2 input[type= "tel"], .form-area2 input[type= "number"]{
+			border: 0;
+			display: block;
+			text-align: center;
+			border: 1px solid #292929;
+			width: 12rem;
+			outline: none;
+			color: black;
+			border-radius: 20px;
+			transition: 0.3s;
+		  }
+
+		  .img-area{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background: #292929;
+			position: absolute;
+			top: -5%;
+			left: 45%;
+			
+			
+		}
+	}

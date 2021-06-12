@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Usuário</title>
+
+    <link rel="shortcut icon" href="../Assets/Images/perfil.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Assets/CSS/style.css">
+</head>
+<body>
+    <form id="cadastro"  onsubmit="event.preventDefault();onFormSubmitCliente()" autocomplete="off">
+        <div class="form-area">
+          <div class="img-area">
+            <img src="../Assets/Images/usuarioCadastro.png" />
+          </div>
+          <div class="login">
+            <h2 id="autenticaTitle">Cadastre-se</h2>
+            <h3></h3>
+            <label for="nickname">Cadastre seu Nickname</label>
+            <input type="text" placeholder="@Nickname" id="nickname" value="" required/>
+            
+            <label for="nomeCliente">Cadastre seu nome completo</label>
+            <input type="text" placeholder="Nome Completo" id="nomeCliente" value="" required/>
+
+            <label for="cpfCliente">Cadastre seu endereço</label>
+            <input type="text" placeholder="Endereço" id="cpfCliente" value="" />
+
+            <label for="telefoneCliente">Cadastre seu telefone</label>
+            <input type="tel" name="telefoneCliente"  value="" id="telefoneCliente" value=""  pattern="[0-9]{10}" title="Somente números - 10 digitos" placeholder="Seu telefone" required>
+
+            <label for="carteiraCliente">Cadastre a quantia da sua carteira</label>
+            <input type="number" placeholder="Carteira" id="carteiraCliente" value="" />
+
+            <label for="emailCadastro">Cadastre seu e-mail</label>
+            <input type="email" placeholder="E-mail" id="emailCadastro"  required/>
+  
+            <label for="senhaCadastro">Cadastre sua senha</label>
+            <input type="password" placeholder="Senha" id="senhaCadastro"  required minlength="6"/>
+  
+            <button id="cadastroCliente" type="button" class="btn btn-text">Cadastrar</button>
+  
+            <div id="status" class="status"></div>
+            <div id="entrar"></div>
+          </div>
+        </div>
+      </form>
+
+    <script src="../Assets/JS/variaveis.js"></script>
+    <script src="../Assets/JS/cadastrar.js"></script>
+</body>
+</html>

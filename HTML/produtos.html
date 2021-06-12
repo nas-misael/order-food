@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Produtos</title>
+
+    <link rel="shortcut icon" href="../Assets/Images/produtos.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Assets/CSS/produtos.css">
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td id="formulario">
+                <form onsubmit="event.preventDefault();onFormSubmitProdutos()" autocomplete="off">
+                    <h1 id="tituloProdutos">Cadastro de Produtos</h1> <!-- Pega o nome do restaurante pelo js -->
+                    <div>
+                        <input type="text"  value="" id="nomeProduto" placeholder="Nome do Produto" required>
+                    </div>
+                    <div>
+                        <input type="number" name="valor" value="" id="valor" placeholder="Valor do Produto" required>
+                    </div>
+                    <div>
+                        <select name="categorias" id="categorias">
+                            <option value="" disabled selected>Escolha a categoria</option>
+                            <option value="Bebidas">Bebidas</option>
+                            <option value="Lanches">Lanches</option>
+                            <option value="Porções">Porções</option>
+                            <option value="Pratos">Pratos</option>
+                            <option value="Pizzas">Pizzas</option>
+                        </select>
+                    </div>
+                    <div>
+                        <textarea name="descricao" placeholder="Faça uma breve descrição" id="descricao" cols="40" rows="5"></textarea>
+                    </div>
+                    <div>
+                        <label for="arquivoProdutos">
+                            <img src="../Assets/Images/adicionarComida.jpg" alt="Clique para adicionar uma imagem" id="imagemProdutos" class="ImageAdd" title="Adicione a foto do seu produto" style="height: 150px; width: 200px; cursor: pointer;">
+                        </label>
+                        <br />
+                        <input type="file" id="arquivoProdutos" files name="arquivoProdutos" value="" data-atributte accept="image/*">
+                    </div>
+                    <div>
+                        <button type="button" id="adicione"> Adicione </button>
+                        <button type="reset"> Reset </button>
+                    </div>
+                </form>
+            </td>
+            <td id="timeLista"> 
+                <table class="list">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Imagem</th>
+                            <th>Nome Produto</th>
+                            <th>Valor (R$)</th>
+                            <th>Categoria</th>
+                            <th>Descrição</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <a href="../HTML/CrudRestaurante.html" id="voltainicio" class="nav-links">
+            <img src="../Assets/Images/voltar.png" id="acesse" alt="Acesse CRUD Restaurante" title="Acesse CRUD Restaurante" style="width: 100px; height: 100px;">
+        </a>
+    </table>
+    <script src="../Assets/JS/variaveis.js"></script>
+    <script src="../Assets/JS/produtos.js"></script>
+</body>
+</html>

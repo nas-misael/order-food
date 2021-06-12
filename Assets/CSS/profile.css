@@ -1,0 +1,584 @@
+* {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #C7C7A6;
+            width: 100%;
+            height: 100%;
+        }
+
+        .navbar {
+            font-size: 18px;
+            background-color: #605C4E;
+            padding-bottom: 10px;
+        }
+
+        .main-nav {
+            list-style-type: none;
+            display: none;
+        }
+
+        .nav-links,
+        .logo {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .main-nav li {
+            text-align: center;
+            margin: 15px auto;
+        }
+
+        .logo {
+            display: inline-block;
+            font-size: 22px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .navbar-toggle {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 24px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        @media screen and (min-width: 768px) {
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 0;
+                height: 70px;
+                align-items: center;
+            }
+
+            .main-nav {
+                display: flex;
+                margin-right: 30px;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+
+            .main-nav li {
+                margin: 0;
+            }
+
+            .nav-links {
+                margin-left: 40px;
+            }
+
+            .logo {
+                margin-top: 0;
+            }
+
+            .navbar-toggle {
+                display: none;
+            }
+
+            .logo:hover,
+            .nav-links:hover {
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+
+ 
+
+i::before {
+  content:"";
+  display:inline-block;
+  margin-right: 30px;	
+}
+
+i { 	
+    background-size:contain;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.p1 {
+    font-size: 0.9rem;
+    color: #a6a5a5;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+    font-family: "Roboto", Helvetica, sans-serif;
+    margin-left: 35%;
+    width: 250px;
+}
+
+.p2 {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Roboto", Helvetica, sans-serif;
+  margin-left: 35%;
+  width: 150px;
+}
+
+
+.localEntregar {
+    font-size: 0.75rem;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    text-align: center;
+    margin-top: -5px;
+    margin-left: 35%;
+}
+
+#iconeLocal {
+    color: #CD0000;
+    background-image:url("../Images/local.png");
+    height:15px; 	
+    width:15px; 
+    
+}
+
+.fa-bars {
+  background-image: url("../Images/icone-responsivo.png");
+  height:100px;	
+  width:65px;
+}
+
+#mais {
+    background-image: url("../Images/mais.png");
+    height:20px; 	
+    width:20px; 
+    padding: 2px;
+}
+
+#menos {
+    background-image: url("../Images/menos.png");
+    height:20px; 	
+    width:20px; 
+    padding: 2px;
+}
+
+.carteira {
+    font-size: 0.75rem;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    text-align: center;
+    margin: 15px auto;
+    width:250px;
+}
+.carteira p {
+    margin-left: 5px;
+}
+
+#carteiraIcone {
+    background-image: url("../Images/credito.png");
+    height:30px; 	
+    width:30px; 
+    padding: 2px;
+}
+  
+  
+  
+h1 {
+    font-family: 'Roboto',  sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #363020;
+    text-align: center;
+}  
+
+.divReceita{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 10px 4px 20px 10px rgba(0, 0,0,0.2);
+    width: 250px;
+    height: 350px;
+    margin: 5px 20px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    transition: transform 0.8s;
+}
+
+
+
+.divReceita img {
+    width: 100%;
+    height: 140px;
+    max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+    overflow: hidden
+}
+
+.tituloReceita {
+    font-size: 1.3rem;
+    color: #CD0000;
+    font-weight: bold;
+    margin-top: 0.75rem;
+    font-family: 'Roboto';
+}
+
+
+
+img {
+    max-height: 50vh;
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  a:hover {
+    color: #bbb;
+  }
+  
+  .italic { font-style: italic; }
+  .small { font-size: 0.8em; }
+  
+  /** LIGHTBOX MARKUP **/
+  
+  .lightbox {
+    /* Default to hidden */
+    display: none;
+  
+    /* Overlay entire screen */
+    position: fixed;
+    
+    /* A bit of padding around image */
+    padding: 2em;
+  
+    /* Translucent background */
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Unhide the lightbox when it's the target */
+  .lightbox:target {
+    display:inline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  .lightbox img {
+    /* Full width and height */
+    display: inline;
+    width: 90%;
+    height: 90%;
+  
+    /* Size and position background image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+.curso img {
+    width: 100%;
+    max-height: 50%;
+}
+.curso-info {
+    height: 90px;
+}
+
+.curso-info h4 {
+    font-size: 1.2em;
+    font-weight: 100;
+    margin: 0px;
+}
+.curso-info p {
+    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 25px;
+    margin-top: 40px;
+    margin: 0px;
+}
+.curso-preco {
+    float: right;
+    padding: 10px;
+    margin-top: 55px;
+}
+.preco-de {
+    text-decoration: line-through;
+    color: firebrick;
+    font-size: 0.75em;
+}
+.preco-por {
+    color: forestgreen;
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+#comprasLink {
+    width: 50px;
+    height: 20px;
+    float: right;
+    margin-top: -25px;
+}
+
+#compras {
+    background-image: url("../Images/compras.png");
+    height:100%;	
+    width:20px; 
+    margin-left: 10px;
+    padding: 5px;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+  }
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+  }
+  input[type="number"]{
+  outline:none;
+  height: 20px;
+  width: 20px;
+  margin-top: 65px;
+  border: 1px solid #9C1C1C;
+  color: #000;
+  font-size: 1;
+  }
+
+  label, input, button {
+      font-size: inherit;
+      padding: 0.2em;
+      -moz-box-sizing: content-box;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+  }
+  button{
+  height: 20px;
+  width: 20px;
+  outline:none;
+  cursor: pointer;
+
+  }
+
+button.a, button.b {
+    background-color: #9C1C1C;
+    border: 1px solid #9C1C1C;
+}
+
+.course-info img {
+  height: 90%;
+  width: 20%;
+  float: left;
+}
+
+.course-preview {
+	background-color: #2A265F;
+	color: #fff;
+	padding: 30px;
+	width: 200px;
+}
+
+
+.course {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 90%;
+  height: 150px;
+	margin: 20px;
+	overflow: hidden;
+}
+
+.course h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.course h2 {
+	letter-spacing: 1px;
+  font-size: 26px;
+  width: 60%;
+  color: #000;
+}
+
+#descricao {
+  opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+  color: #000;
+}
+
+
+
+.course-info {
+	padding: 15px;
+	position: relative;
+	width: 100%;
+}
+
+
+.btn {
+	background-color: #2A265F;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+  width: 100px;
+	letter-spacing: 1px;
+}
+
+
+.box {
+    width: 60%;
+    margin: 0 auto;
+    padding: 15px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .button {
+    font-size: 1em;
+    padding: 10px;
+    color: rgba(0, 0, 0);
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+
+  .button:hover {
+    background: #A49966;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  
+  .popup {
+    margin: 0 auto;
+    padding: 20px;
+    background: #605C4E;
+    border-radius: 5px;
+    width: 80%;
+    position: relative;
+    height: 90%;
+    transition: all 2s ease-in-out;
+  }
+  
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  
+  
+  @-moz-document url-prefix() {
+    .payment-methods input:checked + label:after {
+      bottom: 0;
+      right: 0;
+      background-color: #21b4d0;
+    }
+  }
+
+  
+h2, h3 {
+    font-family: 'Roboto',  sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #EAFFDA;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+label{
+    font-family: 'Roboto',  sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+
+}
+
+
+
+input[type=text], input[type=tel], input[type=email] {
+    border-bottom: 6px solid #212F3C; 
+    width: 60%;
+    padding: 15px;
+    margin: 30px 50px;
+    box-sizing: border-box;
+    margin-left: 15%;
+    outline: none;
+}
+
+@media screen and (max-width: 480px) {
+  .p1, .localEntregar, .carteira {
+    visibility: hidden;
+  }
+
+}

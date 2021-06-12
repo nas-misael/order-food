@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Perfil</title>
+
+    <link rel="shortcut icon" href="../Assets/Images/user.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Assets/CSS/user.css">
+
+</head>
+<body>
+    <form id="autentica" autocomplete="off">
+        <section class="form-area">
+            
+            <div class="conteudo-usuario">
+            <h2 id="titlePerfil"></h2>
+            <div id="imagemUsuario">
+                <img src="../Assets/Images/man.png" alt="Imagem do usuário" title="Imagem do usuário" style="width: 50px; height: 50px;">
+            </div>
+            <div class="conteudo-perfil" id="emailPerfil">
+                <h3 id="mostraEmail">Seu email:</h3>
+            </div>
+            <div>
+                <a href="#popup1" id="atualizar" class="btn">Atualizar</a>
+                <button id="del" class="btn excluir" type="button">Excluir conta</button>
+                <div id="popup1" class="overlay">
+                    <div class="popup">
+                        <h2>Realize suas alterações</h2>
+    
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            <section>
+                                <div class="form-area2">
+                                    <div class="img-area">
+                                      <img src="../Assets/Images/usuarioCadastro.png" />
+                                    </div>
+                                    <div class="login">
+                                      <h2 id="autenticaTitle">Atualizar cadastro</h2>
+                                      <h3></h3>
+                                      <label for="nicknameAtualizar">Atualize seu Nickname</label>
+                                      <input type="text" placeholder="@Nickname" id="nicknameAtualizar" value="" required/>
+                                      
+                                      <label for="nomeAtualizar">Atualize seu nome completo</label>
+                                      <input type="text" placeholder="Nome Completo" id="nomeAtualizar" value="" required/>
+                          
+                                      <label for="cpfAtualizar">Atualize seu endereço</label>
+                                      <input type="text" placeholder="Endereço" id="cpfAtualizar" value="" />
+                          
+                                      <label for="telefoneAtualizar">Atualize seu telefone</label>
+                                      <input type="tel" name="telefoneAtualizar"  value="" id="telefoneAtualizar" value=""  pattern="[0-9]{10}" title="Somente números - 10 digitos" placeholder="Seu telefone" required>
+                          
+                                      <label for="carteiraAtualizar">Atualize a quantia da sua carteira</label>
+                                      <input type="number" placeholder="Carteira" id="carteiraAtualizar" value="" />
+                          
+                                      <label for="emailAtualizar">Atualize seu e-mail</label>
+                                      <input type="email" placeholder="E-mail" id="emailAtualizar" value="" required/>
+                            
+                                      <label for="senhaAtualizar">Atualize sua senha</label>
+                                      <input type="password" placeholder="Senha" id="senhaAtualizar" value="" required minlength="6"/>
+                            
+                                      <button id="atualizarCliente" type="button" class="btn btn-text">Atualizar</button>
+                            
+                                      <div id="statusatualizar" class="status"></div>
+                                    </div>
+                                  </div>
+                            </section>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="statusMostrar" class="status"></div>
+            </div>
+
+            <div class="banner">
+                
+            </div>
+            
+
+
+        </section>
+
+    </form>
+    <a href="../HTML/profile.html" id="voltainicio" class="nav-links">
+        <img src="../Assets/Images/voltar.png" id="acesse" alt="Acesse para voltar ao profile" title="Acesse para voltar ao profile" style="width: 100px; height: 100px;">
+    </a>
+    <script src="../Assets/JS/variaveis.js"></script>
+    <script src="../Assets/JS/user.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Criação de um projeto desenvolvido com o paradigma OO e CRUD para a disciplina de Programação II do IFSul, com o intuito de simular um app de cadastro de restaurantes, comidas e usuários.
+O site inicia-se com o cadastro do restaurantes no arquivo restaurante.html. Logo após, é necessária o gerenciamento dos restaurantes cadastrados no arquivo CrudRestaurante.html. Nele é possível adicionar os produtos de cada restaurante em específico.
+Após, é possível a criação do usuário e sua autenticação, pelos arquivos cadastrar.html e autenticacao.html, respectivamente. 
+Após autenticação, é possível acessar seu Profile, e gerenciar sua conta, bem como, comprar seus produtos.

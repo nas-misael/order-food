@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="../Assets/Images/restaurante.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../Assets/CSS/restaurante.css">
+    <link rel="stylesheet" href="../Assets/CSS/sliderAndProgress.css">
+    
+    
+    <title>Restaurantes</title>
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit()" autocomplete="off">
+                    <main>
+                        <h1>Cadastro de restaurantes no sistema</h1>
+                        <article class="container">
+                            <ul class="progressbar">
+                                <li id="dados" class="active">Dados</li>
+                                <li id="entrega">Entrega</li>
+                                <li id="representante">Representante</li>
+                                <li id="cadastrar">Cadastrar</li>
+                            </ul>
+                        </article>
+                        <div class="CSSgal">
+                            <!-- Don't wrap targets in parent -->
+                            <div id="s1"></div> 
+                            <div id="s2"></div>
+                            <div id="s3"></div>
+                            <div id="s4"></div>
+                          
+                            <div class="slider">
+                                <section class="dados-restaurante">
+                                    <h2>Dados do restaurante:</h2>
+                                    <input type="text" name="nomeRestaurante" value="" id="nomeRestaurante" placeholder="Nome do seu restaurante" required>
+                                    <input type="tel" name="telefoneRestaurante"  value="" id="telefoneRestaurante"  pattern="[0-9]{10}" title="Somente números - 10 digitos" placeholder="Telefone do seu restaurante" required>
+                                    <input type="text" name="enderecoRestaurante" id="enderecoRestaurante" value="" placeholder="Endereço do seu restaurante" required>
+                                    <br />
+                                    <i id="rs"></i><i id="sc"></i><i id="pr"></i>
+                                    <br />
+                                    <select name="estadoRestaurante" id="estadoRestaurante" required>
+                                        <option value="" disabled selected>Estado</option>
+                                        <option value="RS">Rio Grande Do Sul</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="PR">Paraná</option>
+                                    </select>
+                                    <select name="cidadeRestaurante" id="cidadeRestaurante" required>
+                                        <option value="" disabled selected>Cidade</option>
+                                    </select>
+                                </section>
+                                <section class="delivery">
+                                    <h2>Já faz entrega?</h2>
+                                    <ul class="payment-methods">
+                                        <li class="payment-method paypal">
+                                            <input type="radio" name="delivery" id="simDelivery" value="sim">
+                                            <label for="simDelivery">Sim</label>
+                                        </li>
+                                        <li class="payment-method pagseguro">
+                                            <input type="radio" name="delivery" id="naoDelivery" value="nao">
+                                            <label for="naoDelivery">Não</label>
+                                        </li>
+                                      </ul>
+                                    <br />
+                                    <div class="hide" id="hide-delivery">
+                                        <input type="number" name="motoqueiros" min="1" id="motoqueiros" placeholder="Quantidade de motoqueiros (Ex:2)">
+                                        <!-- Usar js para aparecer essa parte apenas se for sim -->
+                                        <br />
+                                        <select name="tempoRestaurante" id="tempoRestaurante" required>
+                                            <option value="" disabled selected>Há quanto tempo faz delivery?</option>
+                                            <option value="1 mes">1 mês</option>
+                                            <option value="6 mes">6 meses</option>
+                                            <option value="1 ano">1 ano ou mais</option>
+                                        </select>
+                                    </div>
+                                </section>
+                                <section class="dono-restaurante">
+                                    <h2>Representante legal:</h2>
+                                    <input type="text" name="nomeDono" value="" id="nomeDono" placeholder="Nome responsável" required>
+                                    <input type="tel" name="telefoneDono"  value="" id="telefoneDono"  pattern="[0-9]{10}" title="Somente números - 10 digitos" placeholder="Telefone responsável" required>
+                                    <input type="email" name="emailDono" id="emailDono" value="" required placeholder="E-mail responsável">
+                                </section>
+                                <section>
+                                    <div>
+                                        <h2>Não esqueça da foto do seu restaurante...</h2>
+                                        <label for="arquivo-restaurante">
+                                            <img src="../Assets/Images/fotoRestaurante.jpg" id="ImagemAdd" alt="Clique para adicionar uma imagem" class="ImageAdd" title="Adicione a foto do seu restaurante" style="height: 150px; width: 200px; cursor: pointer;">
+                                        </label>
+                                        <br />
+                                        <input type="file" id="arquivo-restaurante" value="" onchange="mudaImagem()" accept="image/*">
+                                    </div>
+                                    <button type="submit" id="cadastrarForm">Cadastrar</button>
+                                    <button type="reset"> Reset </button>
+                                </section>
+                            </div>
+                            
+                            <div class="prevNext">
+                              <div id="s4s2"><a href="#s4" id="s4a">>>></a><a href="#s2" id="s2a">>>></a></div>
+                              <div id="s1s3"><a href="#s1" id="s1a">>>></a><a href="#s3" id="s3a">>>></a></div>
+                              <div id="s2s4"><a href="#s2" id="s2b">>>></a><a href="#s4" id="s4b">>>></a></div>
+                              <div id="s3s1"><a href="#s3" id="s3b">>>></a><a href="#s1" id="s1b">>>></a></div>
+                            </div>
+                          
+                          </div>
+                        
+                        </main>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <a href="../HTML/CrudRestaurante.html" id="voltainicio" class="nav-links">
+        <img src="../Assets/Images/entrar.png" id="acesse" alt="Acesse CRUD Restaurante" title="Acesse CRUD Restaurante" style="width: 100px; height: 100px;">
+    </a>
+    <script src="../Assets/JS/variaveis.js"></script>
+    <script src="../Assets/JS/restaurante.js"></script>
+</body>
+</html>
